@@ -1,9 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Helvetica, sans-serif;
+  /* font-family: "Inter", sans-serif; */
+  overflow: hidden;
 }
 
 a {
@@ -13,4 +18,265 @@ a {
 
 * {
   box-sizing: border-box;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  /* overflow: hidden; */
+}
+
+.insta {
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.deck {
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0.15em;
+  }
+
+  50% {
+    top: -0.15em;
+  }
+
+  100% {
+    top: 0.15em;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .insta1 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite;
+}
+
+.insta2 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.1s;
+}
+.insta3 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.2s;
+}
+
+.insta4 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.3s;
+}
+
+.insta5 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.4s;
+}
+
+.insta6 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.5s;
+}
+
+.insta7 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.6s;
+}
+.insta8 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.7s;
+}
+
+.insta9 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.8s;
+}
+
+.deck1 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite;
+}
+
+.deck2 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.1s;
+}
+.deck3 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.2s;
+}
+.deck4 {
+  position: relative;
+  display: inline-block;
+  animation: rotate 3s ease infinite 0.3s;
+} */
+
+.insta1 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite;
+  transition: 0.1s;
+}
+
+.insta2 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.1s;
+  transition: 0.1s;
+}
+.insta3 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.2s;
+  transition: 0.1s;
+}
+
+.insta4 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.3s;
+  transition: 0.1s;
+}
+
+.insta5 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.4s;
+  transition: 0.1s;
+}
+
+.insta6 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.5s;
+  transition: 0.1s;
+}
+
+.insta7 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.6s;
+  transition: 0.1s;
+}
+.insta8 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.7s;
+  transition: 0.1s;
+}
+
+.insta9 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.8s;
+  transition: 0.1s;
+}
+
+.deck1 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite;
+  transition: 0.1s;
+}
+
+.deck2 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.1s;
+  transition: 0.1s;
+}
+.deck3 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.2s;
+  transition: 0.1s;
+}
+.deck4 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.3s;
+  transition: 0.1s;
+}
+
+.insta1:hover {
+  text-transform: uppercase;
+  transform: skew(30deg) scale(1.2);
+}
+.insta2:hover {
+  text-transform: uppercase;
+  transform: skew(-10deg) scale(1.2);
+}
+.insta3:hover {
+  text-transform: uppercase;
+  transform: skew(-20deg) scale(1.2);
+}
+.insta4:hover {
+  text-transform: uppercase;
+  transform: skew(40deg) scale(1.2);
+}
+.insta5:hover {
+  text-transform: uppercase;
+  transform: skew(20deg) scale(1.2);
+}
+.insta6:hover {
+  text-transform: uppercase;
+  transform: skew(-15deg) scale(1.2);
+}
+.insta7:hover {
+  text-transform: uppercase;
+  transform: skew(20deg) scale(1.2);
+}
+.insta8:hover {
+  text-transform: uppercase;
+  transform: skew(-40deg) scale(1.2);
+}
+.insta9:hover {
+  text-transform: uppercase;
+  transform: skew(-10deg) scale(1.2);
+}
+
+.deck1:hover {
+  text-transform: uppercase;
+  transform: skew(20deg) scale(1.2);
+}
+.deck2:hover {
+  text-transform: uppercase;
+  transform: skew(-40deg) scale(1.2);
+}
+.deck3:hover {
+  text-transform: uppercase;
+  transform: skew(30deg) scale(1.2);
+}
+.deck4:hover {
+  text-transform: uppercase;
+  transform: skew(-10deg) scale(1.2);
 }
