@@ -1,5 +1,6 @@
 import AboutDropDown from "./AboutDropDown";
 import { useState } from "react";
+import { isMobile } from "react-device-detect";
 
 const About = (props) => {
   const [hoverInsta, setHoverInsta] = useState(false);
@@ -72,97 +73,101 @@ const About = (props) => {
         <AboutDropDown madWords={madWords10} />.
       </p>
 
-      <p className="font-[400] pt-8">
-        We have an{" "}
-        <a
-          href="https://www.instagram.com/real.good.studio/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {/* <span className="insta cursor-pointer inline">
-            <span className="insta1 text-red-500">i</span>
-            <span className="insta2 text-yellow-500">n</span>
-            <span className="insta3 text-green-500">s</span>
-            <span className="insta4 text-blue-500">t</span>
-            <span className="insta5 text-pink-500">a</span>
-            <span className="insta6 text-blue-500">g</span>
-            <span className="insta7 text-red-500">r</span>
-            <span className="insta8 text-yellow-500">a</span>
-            <span className="insta9 text-green-500">m</span>
-          </span> */}
-
-          <span
-            className="insta cursor-pointer inline-block w-[63px] sm:w-[85px] md:w-[90px] lg:w-[105px] xl:w-[120px] 2xl:w-[130px]"
-            onMouseEnter={() => setHoverInsta(true)}
-            onMouseLeave={() => setHoverInsta(false)}
+      {!isMobile ? (
+        <p className="font-[400] pt-8">
+          We have an{" "}
+          <a
+            href="https://www.instagram.com/real.good.studio/"
+            target="_blank"
+            rel="noreferrer"
           >
-            <span className={hoverInsta ? "insta1 text-red-500" : "insta1 "}>
-              i
+            <span className="insta cursor-pointer inline">
+              <span className="insta1 text-red-500">i</span>
+              <span className="insta2 text-yellow-500">n</span>
+              <span className="insta3 text-green-500">s</span>
+              <span className="insta4 text-blue-500">t</span>
+              <span className="insta5 text-pink-500">a</span>
+              <span className="insta6 text-blue-500">g</span>
+              <span className="insta7 text-red-500">r</span>
+              <span className="insta8 text-yellow-500">a</span>
+              <span className="insta9 text-green-500">m</span>
             </span>
-            <span className={hoverInsta ? "insta2 text-yellow-500" : "insta2 "}>
-              n
+          </a>{" "}
+          with some more work.
+        </p>
+      ) : (
+        <p className="font-[400] pt-8">
+          We have an{" "}
+          <a
+            href="https://www.instagram.com/real.good.studio/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span
+              className="insta cursor-pointer inline-block w-[63px] sm:w-[85px] md:w-[90px] lg:w-[105px] xl:w-[120px] 2xl:w-[130px]"
+              onMouseEnter={() => setHoverInsta(true)}
+              onMouseLeave={() => setHoverInsta(false)}
+            >
+              <span className={hoverInsta ? "insta1 text-red-500" : "insta1 "}>
+                i
+              </span>
+              <span
+                className={hoverInsta ? "insta2 text-yellow-500" : "insta2 "}
+              >
+                n
+              </span>
+              <span
+                className={hoverInsta ? "insta3 text-green-500" : "insta3 "}
+              >
+                s
+              </span>
+              <span className={hoverInsta ? "insta4 text-blue-500" : "insta4 "}>
+                t
+              </span>
+              <span className={hoverInsta ? "insta5 text-pink-500" : "insta5 "}>
+                a
+              </span>
+              <span className={hoverInsta ? "insta6 text-blue-500" : "insta6 "}>
+                g
+              </span>
+              <span className={hoverInsta ? "insta7 text-red-500" : "insta7 "}>
+                r
+              </span>
+              <span
+                className={hoverInsta ? "insta8 text-yellow-500" : "insta8 "}
+              >
+                a
+              </span>
+              <span
+                className={hoverInsta ? "insta9 text-green-500" : "insta9 "}
+              >
+                m
+              </span>
             </span>
-            <span className={hoverInsta ? "insta3 text-green-500" : "insta3 "}>
-              s
+          </a>{" "}
+          with some work and a{" "}
+          <span
+            className="deck cursor-pointer  inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px]"
+            onMouseEnter={() => setHoverDeck(true)}
+            onMouseLeave={() => setHoverDeck(false)}
+          >
+            <span className={hoverDeck ? "deck1 text-red-500" : "deck1 "}>
+              d
             </span>
-            <span className={hoverInsta ? "insta4 text-blue-500" : "insta4 "}>
-              t
+            <span className={hoverDeck ? "deck2 text-yellow-500" : "deck2 "}>
+              e
             </span>
-            <span className={hoverInsta ? "insta5 text-pink-500" : "insta5 "}>
-              a
+            <span className={hoverDeck ? "deck3 text-green-500" : "deck3 "}>
+              c
             </span>
-            <span className={hoverInsta ? "insta6 text-blue-500" : "insta6 "}>
-              g
+            <span className={hoverDeck ? "deck4 text-blue-500" : "deck4 "}>
+              k
             </span>
-            <span className={hoverInsta ? "insta7 text-red-500" : "insta7 "}>
-              r
-            </span>
-            <span className={hoverInsta ? "insta8 text-yellow-500" : "insta8 "}>
-              a
-            </span>
-            <span className={hoverInsta ? "insta9 text-green-500" : "insta9 "}>
-              m
-            </span>
-          </span>
+          </span>{" "}
+          with some more work.
+        </p>
+      )}
 
-          {/* <span className="insta cursor-pointer inline">
-            <span className=" text-red-500">i</span>
-            <span className=" text-yellow-500">n</span>
-            <span className=" text-green-500">s</span>
-            <span className=" text-blue-500">t</span>
-            <span className=" text-pink-500">a</span>
-            <span className=" text-blue-500">g</span>
-            <span className=" text-red-500">r</span>
-            <span className=" text-yellow-500">a</span>
-            <span className=" text-green-500">m</span>
-          </span> */}
-
-          {/* <span className="insta cursor-pointer inline">instagram</span> */}
-        </a>{" "}
-        with some work and a{" "}
-        <span
-          className="deck cursor-pointer  inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px]"
-          onMouseEnter={() => setHoverDeck(true)}
-          onMouseLeave={() => setHoverDeck(false)}
-        >
-          {/* <span className="deck1 text-red-500">d</span>
-          <span className="deck2 text-yellow-500">e</span>
-          <span className="deck3 text-green-500">c</span>
-          <span className="deck4 text-blue-500">k</span> */}
-
-          <span className={hoverDeck ? "deck1 text-red-500" : "deck1 "}>d</span>
-          <span className={hoverDeck ? "deck2 text-yellow-500" : "deck2 "}>
-            e
-          </span>
-          <span className={hoverDeck ? "deck3 text-green-500" : "deck3 "}>
-            c
-          </span>
-          <span className={hoverDeck ? "deck4 text-blue-500" : "deck4 "}>
-            k
-          </span>
-        </span>{" "}
-        with some more work.
-      </p>
       <p className="font-[400] pt-8">
         Currently taking on select projects{" "}
         <a href="mailto: hi@realgood.tv" target="_blank" rel="noreferrer">

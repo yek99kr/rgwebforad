@@ -80,7 +80,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
                 rel="noreferrer"
               >
                 <div
-                  className="absolute w-[402px] h-[88px] top-[0px] right-[-1px] 
+                  className="absolute w-[402px] h-[88px] top-[0px] right-[-1px] bg-white
           
                 "
                 >
