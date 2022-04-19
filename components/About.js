@@ -73,7 +73,7 @@ const About = (props) => {
         <AboutDropDown madWords={madWords10} />.
       </p>
 
-      {!isMobile ? (
+      {isMobile ? (
         <p className="font-[400] pt-8">
           We have an{" "}
           <a
