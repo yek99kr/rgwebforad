@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
 
 const AboutDropDown = ({ madWords }) => {
   const selectedOptionHidden = useRef();
@@ -11,6 +11,16 @@ const AboutDropDown = ({ madWords }) => {
       defaultWidth.current.options[defaultWidth.current.options.selectedIndex]
         .text
     );
+    window.addEventListener(
+      "resize",
+      setChangedWidth(selectedOptionHidden.current.offsetWidth)
+    );
+
+    return () =>
+      window.removeEventListener(
+        "resize",
+        setChangedWidth(selectedOptionHidden.current.offsetWidth)
+      );
   }, []);
 
   useEffect(() => {

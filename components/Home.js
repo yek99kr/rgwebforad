@@ -3,10 +3,12 @@ import Hands from "./Hands";
 import Ad from "./Ad";
 import DragBackground from "./DragBackground";
 import About from "./About";
-import { useEffect } from "react";
 import { isMobile } from "react-device-detect";
+// import useResize from "../utils/useResize";
 
 const Home = () => {
+  // useResize();
+  // console.log(isLarge);
   return (
     <>
       {isMobile ? (
@@ -18,7 +20,7 @@ const Home = () => {
       <Ad />
       <About />
 
-      {isMobile ? null : <Hands />}
+      {!isMobile && <Hands />}
     </>
   );
 };

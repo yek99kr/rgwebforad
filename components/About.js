@@ -39,13 +39,22 @@ const About = (props) => {
     "Netflix",
     "Disney",
   ];
-  const madWords4 = ["make", "a", "b", "c"];
-  const madWords5 = ["good", "a", "b", "c"];
-  const madWords6 = ["memes", "cool vids", "snacks", "tiktok dances"];
-  const madWords7 = ["explores", "navigates", "disrupts", "incentivizes"];
-  const madWords8 = ["the intersection between", "a", "b", "c"];
-  const madWords9 = ["art", "computers", "cool vids", "c"];
-  const madWords10 = ["technology", "a", "b", "c"];
+  const madWords4 = ["make", "sculpt", "curate", "visualize"];
+  const madWords5 = ["good", "groundbreaking", "meaningful", "eco-friendly"];
+  const madWords6 = [
+    "memes",
+    "commerce experiences",
+    "cool vids",
+    "snacks",
+    "tiktok dances",
+  ];
+  const madWords7 = [
+    "explores the intersection between art and technology",
+    "a Kardashian might retweet",
+    "pushes the boulder up the hill",
+    "inspires, educates, and converts",
+    "your CMO will love",
+  ];
 
   return (
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[63%] leading-[2.4] w-[85vw]  md:w-[60vw] md:leading-[2.2] lg:w-[55vw] lg:leading-[1.9] text-[12px] sm:text-[16px] md:text-[17px] lg:text-[20px] xl:text-[23px] 2xl:text-[25px] text-center">
@@ -67,10 +76,7 @@ const About = (props) => {
       </p>
 
       <p className="font-[400] pt-8">
-        We make work that <AboutDropDown madWords={madWords7} />{" "}
-        <AboutDropDown madWords={madWords8} />{" "}
-        <AboutDropDown madWords={madWords9} /> and{" "}
-        <AboutDropDown madWords={madWords10} />.
+        We make work that <AboutDropDown madWords={madWords7} />.
       </p>
 
       {isMobile ? (
@@ -146,24 +152,30 @@ const About = (props) => {
             </span>
           </a>{" "}
           with some work and a{" "}
-          <span
-            className="deck cursor-pointer  inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px]"
-            onMouseEnter={() => setHoverDeck(true)}
-            onMouseLeave={() => setHoverDeck(false)}
+          <a
+            href="https://realgooddeck.netlify.app/#0"
+            target="_blank"
+            rel="noreferrer"
           >
-            <span className={hoverDeck ? "deck1 text-red-500" : "deck1 "}>
-              d
-            </span>
-            <span className={hoverDeck ? "deck2 text-yellow-500" : "deck2 "}>
-              e
-            </span>
-            <span className={hoverDeck ? "deck3 text-green-500" : "deck3 "}>
-              c
-            </span>
-            <span className={hoverDeck ? "deck4 text-blue-500" : "deck4 "}>
-              k
-            </span>
-          </span>{" "}
+            <span
+              className="deck cursor-pointer  inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px]"
+              onMouseEnter={() => setHoverDeck(true)}
+              onMouseLeave={() => setHoverDeck(false)}
+            >
+              <span className={hoverDeck ? "deck1 text-red-500" : "deck1 "}>
+                d
+              </span>
+              <span className={hoverDeck ? "deck2 text-yellow-500" : "deck2 "}>
+                e
+              </span>
+              <span className={hoverDeck ? "deck3 text-green-500" : "deck3 "}>
+                c
+              </span>
+              <span className={hoverDeck ? "deck4 text-blue-500" : "deck4 "}>
+                k
+              </span>
+            </span>{" "}
+          </a>
           with some more work.
         </p>
       )}
