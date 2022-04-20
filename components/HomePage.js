@@ -6,7 +6,7 @@ import About from "./About";
 import { isMobile } from "react-device-detect";
 // import useResize from "../utils/useResize";
 
-const Home = () => {
+const HomePage = () => {
   // useResize();
   // console.log(isLarge);
   return (
@@ -25,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

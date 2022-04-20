@@ -1,5 +1,5 @@
 import Head from "next/head";
-import About from "../components/About";
+import HomePage from "../components/HomePage";
 
 export default function Home() {
   return (
@@ -8,7 +8,8 @@ export default function Home() {
         <title>RGW Experiments</title>
         <meta name="description" content="RGW Experiments" />
       </Head>
-      <About></About>
+
+      <HomePage />
     </div>
   );
 }
