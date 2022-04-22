@@ -56,6 +56,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
         <mesh
           geometry={nodes.Wood.geometry}
           material={materials.wood}
+          className="thumbcursor"
           onClick={(e) => {
             e.stopPropagation(), setClose(!close);
           }}
@@ -78,6 +79,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
                 href="https://www.instagram.com/real.good.studio/"
                 target="_blank"
                 rel="noreferrer"
+                className="thumbcursor"
               >
                 <div
                   className="absolute w-[402px] h-[88px] top-[0px] right-[-1px] bg-white
@@ -85,14 +87,14 @@ export default function Model({ close, setClose, hinge, ...props }) {
                 "
                 >
                   <Vimeo
-                    video="https://vimeo.com/700887737"
+                    video="https://vimeo.com/702152761"
                     autoplay={true}
                     controls={false}
                     loop={true}
                     showTitle={false}
                     height="235%"
                     muted={true}
-                    className="absolute top-[-80%] left-0 pointer-events-none "
+                    className="absolute top-[-80%] left-0 pointer-events-none"
                   />
                 </div>
               </a>
@@ -102,25 +104,25 @@ export default function Model({ close, setClose, hinge, ...props }) {
               </div>
 
               <div
-                className="absolute right-0 top-[-6px] h-[15px]"
+                className="absolute right-0 top-[-6px] h-[15px] thumbcursor"
                 onClick={(e) => {
                   e.stopPropagation(), setClose(!close);
                 }}
               >
                 {showText && (
-                  <div className="relative hidden lg:text-[8px] h-[15px] top-[-3px] pl-[2px] pr-[2px] bg-white rounded-bl lg:inline-block">
+                  <div className="relative hidden lg:text-[8px] h-[15px] top-[-3px] pl-[2px] pr-[2px] bg-white rounded-bl lg:inline-block thumbcursor">
                     AdChoices
                   </div>
                 )}
                 <img
                   src="/adIcon.png"
-                  className="relative w-[15px] h-[15px] inline-block"
+                  className="relative w-[15px] h-[15px] inline-block thumbcursor"
                   onMouseEnter={() => setShowText(true)}
                   onMouseLeave={() => setShowText(false)}
                 ></img>
                 <img
                   src="/adClose.jpg"
-                  className="relative w-[15px] h-[15px] inline-block"
+                  className="relative w-[15px] h-[15px] inline-block thumbcursor"
                 ></img>
               </div>
             </div>

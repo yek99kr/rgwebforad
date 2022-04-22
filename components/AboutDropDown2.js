@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const AboutDropDown = ({ madWords }) => {
+const AboutDropDown = ({ madWords, setRenderNew }) => {
   const selectedOptionHidden = useRef();
   const [currentOption, setCurrentOption] = useState();
   const defaultWidth = useRef();
@@ -25,10 +25,11 @@ const AboutDropDown = ({ madWords }) => {
     <>
       <select
         ref={defaultWidth}
-        className="border-0 bg-gray-50 p-0 rounded text-black noselect thumbcursor"
+        className="border-0 bg-gray-50 p-0 rounded text-black noselect"
         style={{ width: 40 + changedWidth + "px" }}
         onChange={(e) => {
           handleSelect(e);
+          setRenderNew(e.target.value === "explores the intersection between");
         }}
       >
         {madWords.map((item, i) => (

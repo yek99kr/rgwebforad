@@ -5,6 +5,7 @@ const About = (props) => {
   const [hoverInsta, setHoverInsta] = useState(false);
   const [hoverDeck, setHoverDeck] = useState(false);
   const [hoverEmail, setHoverEmail] = useState(false);
+  const [renderNew, setRenderNew] = useState(false);
 
   const madWords1 = [
     "full service",
@@ -12,18 +13,15 @@ const About = (props) => {
     "first to market",
     "plant based",
     "talent driven",
-    "direct to consumer",
   ];
   const madWords2 = [
     "good ideas",
+    "commerce experiences",
     "highly original solutions",
-    "visual storytelling",
-    "bringing your vision to life",
     "making the world a better place",
-    "constantly reclycling",
   ];
   const madWords3 = [
-    "clients",
+    "brands",
     "BMW",
     "Drake",
     "Adult Swim",
@@ -38,21 +36,50 @@ const About = (props) => {
     "Netflix",
     "Disney",
   ];
-  const madWords4 = ["make", "sculpt", "curate", "visualize"];
-  const madWords5 = ["good", "groundbreaking", "meaningful", "eco-friendly"];
-  const madWords6 = [
-    "memes",
+  const madWords4 = [
+    "content",
+    "commercials",
+    "music videos",
+    "campaigns",
+    "websites",
+    "filters/lenses",
+    "animation",
+    "illustration",
+    "design",
+  ];
+  const madWords5 = [
+    "stuff",
     "commerce experiences",
     "cool vids",
     "snacks",
     "tiktok dances",
   ];
+  const madWords6 = [
+    "explores",
+    "inspires",
+    "recontextualizes",
+    "interpolates",
+  ];
   const madWords7 = [
-    "explores the intersection between art and technology",
-    "a Kardashian might retweet",
-    "pushes the boulder up the hill",
-    "inspires, educates, and converts",
-    "your CMO will love",
+    "intersection",
+    "relationship",
+    "boundaries",
+    "interplay",
+    "language",
+  ];
+  const madWords8 = [
+    "art",
+    "computers",
+    "memes",
+    "instagram",
+    "the internet",
+    "biodiversity",
+  ];
+  const madWords9 = [
+    "technology",
+    "immersive branding",
+    "oat milk",
+    "cool vids",
   ];
 
   return (
@@ -75,7 +102,10 @@ const About = (props) => {
       </p>
 
       <p className="font-[400] pt-8">
-        We make work that <AboutDropDown madWords={madWords7} />.
+        We make work that <AboutDropDown madWords={madWords6} /> the{" "}
+        <AboutDropDown madWords={madWords7} /> between{" "}
+        <AboutDropDown madWords={madWords8} /> and{" "}
+        <AboutDropDown madWords={madWords9} />.
       </p>
 
       <p className="font-[400] pt-8">
