@@ -95,10 +95,8 @@ const About = (props) => {
       </p>
 
       <p className="font-[400] pt-8">
-        We collaborate with <AboutDropDown madWords={madWords3} /> to{" "}
-        <AboutDropDown madWords={madWords4} />{" "}
-        <AboutDropDown madWords={madWords5} /> commercials, music videos, XR
-        experiences, social content, and <AboutDropDown madWords={madWords6} />.
+        We work with <AboutDropDown madWords={madWords3} /> to make{" "}
+        <AboutDropDown madWords={madWords4} />.
       </p>
 
       <p className="font-[400] pt-8">
