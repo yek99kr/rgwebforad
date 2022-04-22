@@ -35,7 +35,7 @@ const AboutDropDown = ({ madWords }) => {
     <>
       <select
         ref={defaultWidth}
-        className="border-0 bg-gray-50 p-0 rounded text-black  "
+        className="border-0 bg-gray-50 p-0 rounded text-black noselect"
         style={{ width: 30 + changedWidth + "px" }}
         onChange={(e) => {
           handleSelect(e);

@@ -67,7 +67,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
             position={[0, 0, 0.54]}
           >
             <div
-              className="absolute w-[402px] h-[88px] top-[0px] right-[-1px] 
+              className="absolute w-[402px] h-[88px] top-[0px] right-[-1px] noselect 
           "
               style={{
                 borderColor: "#AEAEAE",
