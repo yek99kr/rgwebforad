@@ -59,13 +59,16 @@ const About = (props) => {
     "inspires",
     "recontextualizes",
     "interpolates",
+    "educates",
+    "questions",
   ];
   const madWords7 = [
     "intersection",
     "relationship",
     "boundaries",
     "interplay",
-    "language",
+    "discourse",
+    "potentiality",
   ];
   const madWords8 = [
     "art",
@@ -73,12 +76,19 @@ const About = (props) => {
     "memes",
     "instagram",
     "the internet",
+    "visual experiences",
     "biodiversity",
+    "complex carbohydrates",
+    "the metaverse",
   ];
   const madWords9 = [
     "technology",
-    "immersive branding",
+    "NFTs",
+    "the multiverse",
+    "innovation",
+    "a painting",
     "oat milk",
+    "experiential marketing",
     "cool vids",
   ];
 
@@ -130,22 +140,16 @@ const About = (props) => {
           </span>
         </a>{" "}
         with some work and a{" "}
-        <a
-          href="https://realgooddeck.netlify.app/#0"
-          target="_blank"
-          rel="noreferrer"
+        <span
+          className="deck inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px] noselect thumbcursor"
+          onMouseEnter={() => setHoverDeck(true)}
+          onMouseLeave={() => setHoverDeck(false)}
         >
-          <span
-            className="deck inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px] noselect thumbcursor"
-            onMouseEnter={() => setHoverDeck(true)}
-            onMouseLeave={() => setHoverDeck(false)}
-          >
-            <span className="deck1 text-purple-500">d</span>
-            <span className="deck2 text-yellow-500">e</span>
-            <span className="deck3 text-sky-400">c</span>
-            <span className="deck4 text-pink-500">k</span>
-          </span>{" "}
-        </a>
+          <span className="deck1 text-purple-500">d</span>
+          <span className="deck2 text-yellow-500">e</span>
+          <span className="deck3 text-sky-400">c</span>
+          <span className="deck4 text-pink-500">k</span>
+        </span>{" "}
         with some more work.
       </p>
 
