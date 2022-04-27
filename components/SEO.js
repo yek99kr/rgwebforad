@@ -4,7 +4,7 @@ const SEO = () => {
   return (
     <Head>
       <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <title>Real Good Studio</title>
       <meta
         name="description"
@@ -16,7 +16,7 @@ const SEO = () => {
         content="We are a full service creative studio specializing in good ideas. We create original, experimental, and interactive work."
       />
       <meta property="og:url" content="realgood.tv" />
-      <meta property="twitter:title" content="Real Good Studio" />
+      {/* <meta property="twitter:title" content="Real Good Studio" />
       <meta
         property="twitter:description"
         content="We are a full service creative studio specializing in good ideas. We create original, experimental, and interactive work."
@@ -34,7 +34,7 @@ const SEO = () => {
         content="https://realgood.tv/img/real-good-vid2.png"
       />
       <meta property="twitter:image:alt" content="Real Good Studio" />
-      <meta property="og:site_name" content="Real Good Studio" />
+      <meta property="og:site_name" content="Real Good Studio" /> */}
       {/* <link
         rel="icon"
         type="image/png"
