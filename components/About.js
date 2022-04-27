@@ -140,16 +140,22 @@ const About = (props) => {
           </span>
         </a>{" "}
         with some work and a{" "}
-        <span
-          className="deck inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px] noselect thumbcursor"
-          onMouseEnter={() => setHoverDeck(true)}
-          onMouseLeave={() => setHoverDeck(false)}
+        <a
+          href="https://realgooddeck.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
         >
-          <span className="deck1 text-purple-500">d</span>
-          <span className="deck2 text-yellow-500">e</span>
-          <span className="deck3 text-sky-400">c</span>
-          <span className="deck4 text-pink-500">k</span>
-        </span>{" "}
+          <span
+            className="deck inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px] noselect thumbcursor"
+            onMouseEnter={() => setHoverDeck(true)}
+            onMouseLeave={() => setHoverDeck(false)}
+          >
+            <span className="deck1 text-purple-500">d</span>
+            <span className="deck2 text-yellow-500">e</span>
+            <span className="deck3 text-sky-400">c</span>
+            <span className="deck4 text-pink-500">k</span>
+          </span>{" "}
+        </a>
         with some more work.
       </p>
 

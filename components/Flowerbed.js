@@ -68,11 +68,10 @@ export default function Model({ close, setClose, hinge, ...props }) {
             position={[0, 0, 0.54]}
           >
             <div
-              className="absolute w-[402px] h-[88px] top-[0px] right-[-1px] noselect 
+              className="absolute w-[402px] h-[88px] top-[0px] right-[-1px] noselect  overflow-hidden
           "
               style={{
                 borderColor: "#AEAEAE",
-                overflow: "hidden",
               }}
             >
               <a
@@ -92,9 +91,10 @@ export default function Model({ close, setClose, hinge, ...props }) {
                     controls={false}
                     loop={true}
                     showTitle={false}
-                    height="235%"
+                    showByline={false}
+                    height="240%"
                     muted={true}
-                    className="absolute top-[-80%] left-0 pointer-events-none"
+                    className="absolute top-[-90%] left-0 pointer-events-none z-[0] "
                   />
                 </div>
               </a>
@@ -104,7 +104,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
               </div>
 
               <div
-                className="absolute right-0 top-[-6px] h-[15px] thumbcursor"
+                className="absolute right-[-1px] top-[-6.5px] thumbcursor z-[1]"
                 onClick={(e) => {
                   e.stopPropagation(), setClose(!close);
                 }}
@@ -120,6 +120,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
                   onMouseEnter={() => setShowText(true)}
                   onMouseLeave={() => setShowText(false)}
                 ></img>
+
                 <img
                   src="/adClose.jpg"
                   className="relative w-[15px] h-[15px] inline-block thumbcursor"
