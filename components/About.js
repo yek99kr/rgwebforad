@@ -1,7 +1,7 @@
 import AboutDropDown from "./AboutDropDown";
 import { useState } from "react";
 
-const About = (props) => {
+const About = (props, isSmallWidth) => {
   const [hoverInsta, setHoverInsta] = useState(false);
   const [hoverDeck, setHoverDeck] = useState(false);
   const [hoverEmail, setHoverEmail] = useState(false);
@@ -115,49 +115,76 @@ const About = (props) => {
         <AboutDropDown madWords={madWords8} /> and{" "}
         <AboutDropDown madWords={madWords9} />.
       </p>
-
-      <p className="font-[400] pt-8">
-        We have an{" "}
-        <a
-          href="https://www.instagram.com/real.good.studio/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span
-            className="insta cursor-pointer inline-block w-[63px] sm:w-[85px] md:w-[90px] lg:w-[105px] xl:w-[120px] 2xl:w-[130px] noselect thumbcursor"
-            onMouseEnter={() => setHoverInsta(true)}
-            onMouseLeave={() => setHoverInsta(false)}
+      {isSmallWidth ? (
+        <p className="font-[400] pt-8">
+          We have an{" "}
+          <a
+            href="https://www.instagram.com/real.good.studio/"
+            target="_blank"
+            rel="noreferrer"
           >
-            <span className="insta1 text-pink-500">i</span>
-            <span className="insta2 text-sky-400">n</span>
-            <span className="insta3 text-yellow-500">s</span>
-            <span className="insta4 text-purple-500">t</span>
-            <span className="insta5 text-pink-500">a</span>
-            <span className="insta6 text-sky-400">g</span>
-            <span className="insta7 text-pink-500">r</span>
-            <span className="insta8 text-yellow-500">a</span>
-            <span className="insta9 text-green-500">m</span>
-          </span>
-        </a>{" "}
-        with some work and a{" "}
-        <a
-          href="https://realgooddeck.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span
-            className="deck inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px] noselect thumbcursor"
-            onMouseEnter={() => setHoverDeck(true)}
-            onMouseLeave={() => setHoverDeck(false)}
+            <span
+              className="insta cursor-pointer inline-block w-[63px] sm:w-[85px] md:w-[90px] lg:w-[105px] xl:w-[120px] 2xl:w-[130px] noselect thumbcursor"
+              onMouseEnter={() => setHoverInsta(true)}
+              onMouseLeave={() => setHoverInsta(false)}
+            >
+              <span className="insta1 text-pink-500">i</span>
+              <span className="insta2 text-sky-400">n</span>
+              <span className="insta3 text-yellow-500">s</span>
+              <span className="insta4 text-purple-500">t</span>
+              <span className="insta5 text-pink-500">a</span>
+              <span className="insta6 text-sky-400">g</span>
+              <span className="insta7 text-pink-500">r</span>
+              <span className="insta8 text-yellow-500">a</span>
+              <span className="insta9 text-green-500">m</span>
+            </span>
+          </a>{" "}
+          with some work.
+        </p>
+      ) : (
+        <p className="font-[400] pt-8">
+          We have an{" "}
+          <a
+            href="https://www.instagram.com/real.good.studio/"
+            target="_blank"
+            rel="noreferrer"
           >
-            <span className="deck1 text-purple-500">d</span>
-            <span className="deck2 text-yellow-500">e</span>
-            <span className="deck3 text-sky-400">c</span>
-            <span className="deck4 text-pink-500">k</span>
-          </span>{" "}
-        </a>
-        with some more work.
-      </p>
+            <span
+              className="insta cursor-pointer inline-block w-[63px] sm:w-[85px] md:w-[90px] lg:w-[105px] xl:w-[120px] 2xl:w-[130px] noselect thumbcursor"
+              onMouseEnter={() => setHoverInsta(true)}
+              onMouseLeave={() => setHoverInsta(false)}
+            >
+              <span className="insta1 text-pink-500">i</span>
+              <span className="insta2 text-sky-400">n</span>
+              <span className="insta3 text-yellow-500">s</span>
+              <span className="insta4 text-purple-500">t</span>
+              <span className="insta5 text-pink-500">a</span>
+              <span className="insta6 text-sky-400">g</span>
+              <span className="insta7 text-pink-500">r</span>
+              <span className="insta8 text-yellow-500">a</span>
+              <span className="insta9 text-green-500">m</span>
+            </span>
+          </a>{" "}
+          with some work and a{" "}
+          <a
+            href="https://realgooddeck.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span
+              className="deck inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px] noselect thumbcursor"
+              onMouseEnter={() => setHoverDeck(true)}
+              onMouseLeave={() => setHoverDeck(false)}
+            >
+              <span className="deck1 text-purple-500">d</span>
+              <span className="deck2 text-yellow-500">e</span>
+              <span className="deck3 text-sky-400">c</span>
+              <span className="deck4 text-pink-500">k</span>
+            </span>{" "}
+          </a>
+          with some more work.
+        </p>
+      )}
 
       <p className="font-[400] pt-8 select-auto">
         Currently taking on select projects{" "}

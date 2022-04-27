@@ -69,7 +69,7 @@ const HomePage = () => {
       )}
 
       <Ad />
-      <About />
+      <About isSmallWidth={isSmallWidth} />
 
       {isSmallWidth || isMobile || isSmallHeight ? null : <Hands />}
     </>
