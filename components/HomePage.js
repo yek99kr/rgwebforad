@@ -68,7 +68,7 @@ const HomePage = () => {
         <DragBackground />
       )}
 
-      <Ad />
+      {!isSmallHeight && <Ad />}
       <About isSmallWidth={isSmallWidth} />
 
       {isSmallWidth || isMobile || isSmallHeight ? null : <Hands />}

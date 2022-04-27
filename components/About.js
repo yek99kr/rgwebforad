@@ -1,7 +1,7 @@
 import AboutDropDown from "./AboutDropDown";
 import { useState } from "react";
 
-const About = (props, isSmallWidth) => {
+const About = (props) => {
   const [hoverInsta, setHoverInsta] = useState(false);
   const [hoverDeck, setHoverDeck] = useState(false);
   const [hoverEmail, setHoverEmail] = useState(false);
@@ -115,7 +115,7 @@ const About = (props, isSmallWidth) => {
         <AboutDropDown madWords={madWords8} /> and{" "}
         <AboutDropDown madWords={madWords9} />.
       </p>
-      {isSmallWidth ? (
+      {props.isSmallWidth ? (
         <p className="font-[400] pt-8">
           We have an{" "}
           <a
