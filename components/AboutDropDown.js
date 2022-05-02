@@ -2,9 +2,17 @@ import { useState, useRef, useEffect } from "react";
 
 const AboutDropDown = ({ madWords }) => {
   const selectedOptionHidden = useRef();
-  const [currentOption, setCurrentOption] = useState();
   const defaultWidth = useRef();
   const [changedWidth, setChangedWidth] = useState();
+  const [currentOption, setCurrentOption] = useState();
+
+  function handleSizeChange(e) {
+    setChangedWidth(selectedOptionHidden.current.offsetWidth);
+  }
+
+  function handleSelect(e) {
+    setCurrentOption(e.target.options[e.target.selectedIndex].text);
+  }
 
   useEffect(() => {
     setCurrentOption(
@@ -14,12 +22,15 @@ const AboutDropDown = ({ madWords }) => {
   }, []);
 
   useEffect(() => {
-    setChangedWidth(selectedOptionHidden.current.offsetWidth);
+    handleSizeChange();
   }, [currentOption]);
 
-  function handleSelect(e) {
-    setCurrentOption(e.target.options[e.target.selectedIndex].text);
-  }
+  useEffect(() => {
+    window.addEventListener("resize", handleSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleSizeChange);
+    };
+  });
 
   return (
     <>
