@@ -93,12 +93,12 @@ const About = (props) => {
   ];
 
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[63%] leading-[2.4] w-[85vw]  md:w-[60vw] md:leading-[2.2] lg:w-[55vw] lg:leading-[1.9] text-[12px] sm:text-[16px] md:text-[17px] lg:text-[20px] xl:text-[23px] 2xl:text-[25px] text-center">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[63%] leading-[2.4] w-[85vw]  md:w-[60vw] md:leading-[2.2] lg:w-[55vw] lg:leading-[1.9] text-[12px] sm:text-[16px] md:text-[17px] lg:text-[20px] xl:text-[23px] 2xl:text-[23.5px] text-center">
       <p className="font-[400]">
         We&apos;re{" "}
         <img
           src="/logoShort.png"
-          className="inline w-[61px] sm:w-[75px] md:w-[85px] lg:w-[95px] xl:w-[100px] 2xl:w-[115px] ml-0.5 mr-0.5"
+          className="inline w-[61px] sm:w-[75px] md:w-[85px] lg:w-[95px] xl:w-[100px] 2xl:w-[107px] ml-0.5 mr-0.5"
         />
         . We&apos;re a <AboutDropDown madWords={madWords1} /> creative studio
         specializing in <AboutDropDown madWords={madWords2} />.
@@ -124,7 +124,7 @@ const About = (props) => {
             rel="noreferrer"
           >
             <span
-              className="insta cursor-pointer inline-block w-[63px] sm:w-[85px] md:w-[90px] lg:w-[105px] xl:w-[120px] 2xl:w-[130px] noselect thumbcursor"
+              className="insta cursor-pointer inline-block noselect thumbcursor"
               onMouseEnter={() => setHoverInsta(true)}
               onMouseLeave={() => setHoverInsta(false)}
             >
@@ -150,7 +150,7 @@ const About = (props) => {
             rel="noreferrer"
           >
             <span
-              className="insta cursor-pointer inline-block w-[63px] sm:w-[85px] md:w-[90px] lg:w-[105px] xl:w-[120px] 2xl:w-[130px] noselect thumbcursor"
+              className="insta cursor-pointer inline-block noselect thumbcursor"
               onMouseEnter={() => setHoverInsta(true)}
               onMouseLeave={() => setHoverInsta(false)}
             >
@@ -172,7 +172,7 @@ const About = (props) => {
             rel="noreferrer"
           >
             <span
-              className="deck inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px] noselect thumbcursor"
+              className="deck inline-block noselect thumbcursor"
               onMouseEnter={() => setHoverDeck(true)}
               onMouseLeave={() => setHoverDeck(false)}
             >
