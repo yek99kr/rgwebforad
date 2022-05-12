@@ -1,10 +1,10 @@
 import HomePage from "../components/HomePage";
-import SEO from "../components/SEO";
+import Head from "../components/Head";
 
 export default function Home() {
   return (
     <div>
-      <SEO />
+      <Head />
       <HomePage />
     </div>
   );

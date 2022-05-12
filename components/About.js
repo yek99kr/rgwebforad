@@ -93,7 +93,7 @@ const About = (props) => {
   ];
 
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[63%] leading-[2.4] w-[85vw]  md:w-[60vw] md:leading-[2.2] lg:w-[55vw] lg:leading-[1.9] text-[12px] sm:text-[16px] md:text-[17px] lg:text-[20px] xl:text-[23px] 2xl:text-[24px] text-center">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[63%] leading-[2.4] w-[85vw]  md:w-[60vw] md:leading-[2.2] lg:w-[55vw] lg:leading-[1.9] text-[12px] sm:text-[16px] md:text-[17px] lg:text-[20px] xl:text-[23px] 2xl:text-[24.5px] text-center">
       <p className="font-[400]">
         We&apos;re{" "}
         <img
@@ -104,19 +104,19 @@ const About = (props) => {
         specializing in <AboutDropDown madWords={madWords2} />.
       </p>
 
-      <p className="font-[400] pt-8">
+      <p className="font-[400] pt-7">
         We work with <AboutDropDown madWords={madWords3} /> to make{" "}
         <AboutDropDown madWords={madWords4} />.
       </p>
 
-      <p className="font-[400] pt-8">
+      <p className="font-[400] pt-7">
         We make work that <AboutDropDown madWords={madWords6} /> the{" "}
         <AboutDropDown madWords={madWords7} /> between{" "}
         <AboutDropDown madWords={madWords8} /> and{" "}
         <AboutDropDown madWords={madWords9} />.
       </p>
       {props.isSmallWidth ? (
-        <p className="font-[400] pt-8">
+        <p className="font-[400] pt-7">
           We have an{" "}
           <a
             href="https://www.instagram.com/real.good.studio/"
@@ -142,7 +142,7 @@ const About = (props) => {
           with some work.
         </p>
       ) : (
-        <p className="font-[400] pt-8">
+        <p className="font-[400] pt-7">
           We have an{" "}
           <a
             href="https://www.instagram.com/real.good.studio/"
@@ -186,7 +186,7 @@ const About = (props) => {
         </p>
       )}
 
-      <p className="font-[400] pt-8 select-auto">
+      <p className="font-[400] pt-7 select-auto">
         Currently taking on select projects{" "}
         <a href="mailto: hi@realgood.tv" target="_blank" rel="noreferrer">
           <span

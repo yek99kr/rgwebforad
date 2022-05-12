@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import { Loader, useProgress } from "@react-three/drei";
 
 // function Progress() {
 //   const { active, progress, errors, item, loaded, total } = useProgress();
@@ -18,7 +17,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Component {...pageProps} />
-      {/* <Loader /> */}
     </div>
   );
 }
