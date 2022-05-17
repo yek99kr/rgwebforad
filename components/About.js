@@ -9,16 +9,19 @@ const About = (props) => {
 
   const madWords1 = [
     "full service",
-    "industry leading",
+    "premium",
+    "interdisciplinary",
     "first to market",
     "plant based",
     "talent driven",
+    "industry leading",
   ];
   const madWords2 = [
     "good ideas",
     "commerce experiences",
     "highly original solutions",
-    "making the world a better place",
+    "liminal space",
+    "making it pop",
   ];
   const madWords3 = [
     "brands",
@@ -30,11 +33,12 @@ const About = (props) => {
     "Paramount Pictures",
     "mike's hard lemonade",
     "Samsung",
-    "Eric Andre",
+    "The Eric Andre Show",
     "Magnolia Pictures",
     "MTV",
     "Netflix",
     "Disney",
+    "Rick and Morty",
   ];
   const madWords4 = [
     "content",
@@ -61,6 +65,8 @@ const About = (props) => {
     "interpolates",
     "educates",
     "questions",
+    "operates within",
+    "elevates",
   ];
   const madWords7 = [
     "intersection",
@@ -69,6 +75,7 @@ const About = (props) => {
     "interplay",
     "discourse",
     "potentiality",
+    "polarity",
   ];
   const madWords8 = [
     "art",
@@ -78,7 +85,11 @@ const About = (props) => {
     "the internet",
     "visual experiences",
     "biodiversity",
+    "tweets",
     "complex carbohydrates",
+    "multi level marketing",
+    "kim",
+    "space",
     "the metaverse",
   ];
   const madWords9 = [
@@ -89,6 +100,9 @@ const About = (props) => {
     "a painting",
     "oat milk",
     "experiential marketing",
+    "simulacrum",
+    "kardashian",
+    "time",
     "cool vids",
   ];
 
