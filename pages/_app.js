@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import { motion, AnimatePresence } from "framer-motion";
 
 // function Progress() {
 //   const { active, progress, errors, item, loaded, total } = useProgress();
@@ -13,11 +14,16 @@ import "../styles/globals.css";
 //   document.getElementById("root")
 // );
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
-    <div>
-      <Component {...pageProps} />
-    </div>
+    <>
+      <AnimatePresence
+        exitBeforeEnter
+        onExitComplete={() => window.scrollTo(0, 0)}
+      >
+        <Component {...pageProps} key={router.asPath} router={router} />
+      </AnimatePresence>
+    </>
   );
 }
 

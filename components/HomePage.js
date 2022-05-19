@@ -56,7 +56,7 @@ const useMediaQueryHeight = (height) => {
   return targetReached;
 };
 
-const HomePage = () => {
+const HomePage = ({ router }) => {
   const isSmallWidth = useMediaQueryWidth(961);
   const isSmallHeight = useMediaQueryHeight(650);
 
@@ -69,7 +69,7 @@ const HomePage = () => {
       )}
 
       {!isSmallHeight && <Ad />}
-      <About isSmallWidth={isSmallWidth} />
+      <About isSmallWidth={isSmallWidth} router={router} />
 
       {isSmallWidth || isMobile || isSmallHeight ? null : <Hands />}
     </>

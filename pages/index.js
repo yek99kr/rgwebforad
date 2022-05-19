@@ -1,11 +1,11 @@
 import HomePage from "../components/HomePage";
 import Head from "../components/Head";
 
-export default function Home() {
+export default function Home({ router }) {
   return (
     <div>
       <Head />
-      <HomePage />
+      <HomePage router={router} />
     </div>
   );
 }
