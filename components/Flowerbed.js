@@ -86,7 +86,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
                 "
                 >
                   <Vimeo
-                    video="https://vimeo.com/703916880"
+                    video="https://vimeo.com/711503129"
                     autoplay={true}
                     controls={false}
                     loop={true}
