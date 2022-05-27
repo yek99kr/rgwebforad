@@ -185,3 +185,8 @@ a {
 .deck4:hover {
   transform: scaleX(-1) scaleY(1);
 }
+
+::selection {
+  /* color: white; */
+  background: #d9dbe1;
+}
