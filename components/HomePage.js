@@ -59,7 +59,8 @@ const useMediaQueryHeight = (height) => {
 
 const HomePage = ({ router }) => {
   const isSmallWidth = useMediaQueryWidth(1023);
-  const isSmallHeight = useMediaQueryHeight(567);
+  const isSmallHeight = useMediaQueryHeight(550);
+  const isSmallestHeight = useMediaQueryHeight(400);
 
   return (
     <>
@@ -69,7 +70,7 @@ const HomePage = ({ router }) => {
         <DragBackground />
       )}
 
-      {!isSmallHeight && <Ad />}
+      {!isSmallestHeight && <Ad />}
       <motion.div
         key={router.route}
         className="w-[100vw]"
