@@ -206,6 +206,9 @@ a {
   transform: scaleX(-1) scaleY(1);
 }
 
+select {
+  height: 1.45em;
+}
 ::selection {
   background: #d9dbe1;
 }
