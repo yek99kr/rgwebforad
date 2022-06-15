@@ -74,118 +74,135 @@ a {
   }
 }
 
-.insta1 {
+.wiggle1 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite;
 }
 
-.insta2 {
+.wiggle2 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.1s;
 }
-.insta3 {
+.wiggle3 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.2s;
 }
 
-.insta4 {
+.wiggle4 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.3s;
 }
 
-.insta5 {
+.wiggle5 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.4s;
 }
 
-.insta6 {
+.wiggle6 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.5s;
 }
 
-.insta7 {
+.wiggle7 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.6s;
 }
-.insta8 {
+.wiggle8 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.7s;
 }
 
-.insta9 {
+.wiggle9 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.8s;
 }
 
-.deck1 {
+.wiggleMobile1 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite;
 }
 
-.deck2 {
+.wiggleMobile2 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.1s;
 }
-.deck3 {
+.wiggleMobile3 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.2s;
 }
-.deck4 {
+
+.wiggleMobile4 {
   position: relative;
   display: inline-block;
   animation: bounce 1s ease infinite 0.3s;
 }
 
-.insta1:hover {
-  transform: scaleX(-1) scaleY(1);
-}
-.insta2:hover {
-  transform: scaleX(-1) scaleY(1);
-}
-.insta3:hover {
-  transform: scaleX(-1) scaleY(1);
-}
-.insta4:hover {
-  transform: scaleX(-1) scaleY(1);
-}
-.insta5:hover {
-  transform: scaleX(-1) scaleY(1);
-}
-.insta6:hover {
-  transform: scaleX(-1) scaleY(1);
-}
-.insta7:hover {
-  transform: scaleX(-1) scaleY(1);
-}
-.insta8:hover {
-  transform: scaleX(-1) scaleY(1);
-}
-.insta9:hover {
-  transform: scaleX(-1) scaleY(1);
+.wiggleMobile5 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.4s;
 }
 
-.deck1:hover {
+.wiggleMobile6 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.5s;
+}
+
+.wiggleMobile7 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.6s;
+}
+.wiggleMobile8 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.7s;
+}
+
+.wiggleMobile9 {
+  position: relative;
+  display: inline-block;
+  animation: bounce 1s ease infinite 0.8s;
+}
+
+.wiggle1:hover {
   transform: scaleX(-1) scaleY(1);
 }
-.deck2:hover {
+.wiggle2:hover {
   transform: scaleX(-1) scaleY(1);
 }
-.deck3:hover {
+.wiggle3:hover {
   transform: scaleX(-1) scaleY(1);
 }
-.deck4:hover {
+.wiggle4:hover {
+  transform: scaleX(-1) scaleY(1);
+}
+.wiggle5:hover {
+  transform: scaleX(-1) scaleY(1);
+}
+.wiggle6:hover {
+  transform: scaleX(-1) scaleY(1);
+}
+.wiggle7:hover {
+  transform: scaleX(-1) scaleY(1);
+}
+.wiggle8:hover {
+  transform: scaleX(-1) scaleY(1);
+}
+.wiggle9:hover {
   transform: scaleX(-1) scaleY(1);
 }
 

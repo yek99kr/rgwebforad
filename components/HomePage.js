@@ -31,6 +31,7 @@ const useMediaQueryWidth = (width) => {
 
   return targetReached;
 };
+
 const useMediaQueryHeight = (height) => {
   const [targetReached, setTargetReached] = useState(false);
 
@@ -64,7 +65,7 @@ const HomePage = ({ router }) => {
 
   return (
     <>
-      {isSmallWidth ? (
+      {isSmallWidth || isMobile ? (
         <div className="absolute top-0 left-0 bg-[#e9ebf0] w-[100vw] h-[100vh]"></div>
       ) : (
         <DragBackground />
@@ -86,7 +87,7 @@ const HomePage = ({ router }) => {
       >
         <About
           isSmallWidth={isSmallWidth}
-          isSmallHeight={isSmallHeight}
+          isMobile={isMobile}
           router={router}
         />
       </motion.div>

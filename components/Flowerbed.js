@@ -64,14 +64,16 @@ export default function Model({ close, setClose, hinge, ...props }) {
           <Html
             transform
             occlude
-            style={{ width: "402px", height: "88px" }}
+            // style={{ width: "402px", height: "88px" }}
+            className=" p-0 w-[402px] h-[88px]  "
             position={[0, 0, 0.54]}
           >
             <div
-              className="absolute w-[402px] h-[88px] top-[0px] right-[-1px] noselect  overflow-hidden
+              className=" w-[100%] h-[100%]\ top-[0px] right-[-1px] noselect  overflow-hidden
           "
               style={{
                 borderColor: "#AEAEAE",
+                transformOrigin: "top left",
               }}
             >
               <a
@@ -81,9 +83,9 @@ export default function Model({ close, setClose, hinge, ...props }) {
                 className="thumbcursor"
               >
                 <div
-                  className="absolute w-[402px] h-[88px] top-[0px] right-[-1px] bg-white
-          
+                  className="absolute w-[100%] h-[100%] top-[0px] right-[-1px] bg-white
                 "
+                  style={{ transformOrigin: "top left", overflow: "hidden" }}
                 >
                   <Vimeo
                     video="https://vimeo.com/711679952"
@@ -93,7 +95,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
                     loop={true}
                     showTitle={false}
                     showByline={false}
-                    height="240%"
+                    height="250%"
                     muted={true}
                     className="absolute top-[-90%] left-0 pointer-events-none z-[0] "
                   />

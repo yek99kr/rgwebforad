@@ -125,28 +125,43 @@ const About = (props) => {
         <AboutDropDown madWords={madWords8} /> and{" "}
         <AboutDropDown madWords={madWords9} />.
       </p>
-      {props.isSmallWidth || props.isSmallHeight ? (
-        <p className="font-[400] pt-7">
-          We have an{" "}
-          <a
-            href="https://www.instagram.com/real.good.studio/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="insta cursor-pointer inline-block noselect thumbcursor">
-              <span className="insta1 text-pink-500">i</span>
-              <span className="insta2 text-sky-400">n</span>
-              <span className="insta3 text-yellow-500">s</span>
-              <span className="insta4 text-purple-500">t</span>
-              <span className="insta5 text-pink-500">a</span>
-              <span className="insta6 text-sky-400">g</span>
-              <span className="insta7 text-pink-500">r</span>
-              <span className="insta8 text-yellow-500">a</span>
-              <span className="insta9 text-green-500">m</span>
-            </span>
-          </a>{" "}
-          with some work.
-        </p>
+      {props.isSmallWidth ? (
+        <>
+          <p className="font-[400] pt-7">
+            We have an{" "}
+            <a
+              href="https://www.instagram.com/real.good.studio/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="insta cursor-pointer inline-block noselect thumbcursor">
+                <span className="wiggleMobile1 text-pink-500">i</span>
+                <span className="wiggleMobile2 text-sky-400">n</span>
+                <span className="wiggleMobile3 text-yellow-500">s</span>
+                <span className="wiggleMobile4 text-purple-500">t</span>
+                <span className="wiggleMobile5 text-pink-500">a</span>
+                <span className="wiggleMobile6 text-sky-400">g</span>
+                <span className="wiggleMobile7 text-pink-500">r</span>
+                <span className="wiggleMobile8 text-yellow-500">a</span>
+                <span className="wiggleMobile9 text-green-500">m</span>
+              </span>
+            </a>{" "}
+            with some work and a{" "}
+            <a
+              href="https://realgooddeck.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="deck inline-block noselect thumbcursor">
+                <span className="wiggleMobile1 text-purple-500">d</span>
+                <span className="wiggleMobile2 text-yellow-500">e</span>
+                <span className="wiggleMobile3 text-sky-400">c</span>
+                <span className="wiggleMobile4 text-pink-500">k</span>
+              </span>{" "}
+            </a>
+            with some more work.
+          </p>
+        </>
       ) : (
         <>
           <p className="font-[400] pt-7">
@@ -157,15 +172,15 @@ const About = (props) => {
               rel="noreferrer"
             >
               <span className="insta cursor-pointer inline-block noselect thumbcursor">
-                <span className="insta1 text-pink-500">i</span>
-                <span className="insta2 text-sky-400">n</span>
-                <span className="insta3 text-yellow-500">s</span>
-                <span className="insta4 text-purple-500">t</span>
-                <span className="insta5 text-pink-500">a</span>
-                <span className="insta6 text-sky-400">g</span>
-                <span className="insta7 text-pink-500">r</span>
-                <span className="insta8 text-yellow-500">a</span>
-                <span className="insta9 text-green-500">m</span>
+                <span className="wiggle1 text-pink-500">i</span>
+                <span className="wiggle2 text-sky-400">n</span>
+                <span className="wiggle3 text-yellow-500">s</span>
+                <span className="wiggle4 text-purple-500">t</span>
+                <span className="wiggle5 text-pink-500">a</span>
+                <span className="wiggle6 text-sky-400">g</span>
+                <span className="wiggle7 text-pink-500">r</span>
+                <span className="wiggle8 text-yellow-500">a</span>
+                <span className="wiggle9 text-green-500">m</span>
               </span>
             </a>{" "}
             with some work and a{" "}
@@ -175,10 +190,10 @@ const About = (props) => {
               rel="noreferrer"
             >
               <span className="deck inline-block noselect thumbcursor">
-                <span className="deck1 text-purple-500">d</span>
-                <span className="deck2 text-yellow-500">e</span>
-                <span className="deck3 text-sky-400">c</span>
-                <span className="deck4 text-pink-500">k</span>
+                <span className="wiggle1 text-purple-500">d</span>
+                <span className="wiggle2 text-yellow-500">e</span>
+                <span className="wiggle3 text-sky-400">c</span>
+                <span className="wiggle4 text-pink-500">k</span>
               </span>{" "}
             </a>
             with some more work.
