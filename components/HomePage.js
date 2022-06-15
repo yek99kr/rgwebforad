@@ -19,6 +19,7 @@ const useMediaQueryWidth = (width) => {
 
   useEffect(() => {
     const media = window.matchMedia(`(max-width: ${width}px)`);
+    // const isM = window.innerWidth < 768;
 
     media.addEventListener("change", updateTarget);
 
@@ -65,7 +66,7 @@ const HomePage = ({ router }) => {
 
   return (
     <>
-      {isSmallWidth || isMobile ? (
+      {isSmallWidth ? (
         <div className="absolute top-0 left-0 bg-[#e9ebf0] w-[100vw] h-[100vh]"></div>
       ) : (
         <DragBackground />
@@ -87,7 +88,7 @@ const HomePage = ({ router }) => {
       >
         <About
           isSmallWidth={isSmallWidth}
-          isMobile={isMobile}
+          // isMobile={isMobile}
           router={router}
         />
       </motion.div>

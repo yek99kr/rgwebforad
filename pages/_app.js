@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import { motion, AnimatePresence } from "framer-motion";
 import Script from "next/script";
-import Menu from "../components/Menu";
 
 function MyApp({ Component, pageProps, router }) {
   return (
