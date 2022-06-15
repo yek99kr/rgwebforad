@@ -3,7 +3,7 @@ import Head from "next/head";
 const SEO = () => {
   return (
     <Head>
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <title>Real Good Studio</title>
       <meta
@@ -16,6 +16,7 @@ const SEO = () => {
         content="We are a full service creative studio specializing in good ideas. We create original, experimental, and interactive work."
       />
       <meta property="og:url" content="realgood.tv" />
+      <meta property="og:type" content="website" />
       <meta property="twitter:title" content="Real Good Studio" />
       <meta
         property="twitter:description"

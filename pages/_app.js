@@ -1,28 +1,31 @@
 import "../styles/globals.css";
 import { motion, AnimatePresence } from "framer-motion";
-
-// function Progress() {
-//   const { active, progress, errors, item, loaded, total } = useProgress();
-//   return <Html center>{progress} % loaded</Html>;
-// }
-
-// const renderMethod = module.hot ? React.render : React.hydrate;
-// renderMethod(
-//   <BrowserRouter>
-//     <RoutersController data={data} routes={routes} />
-//   </BrowserRouter>,
-//   document.getElementById("root")
-// );
+import Script from "next/script";
+import Menu from "../components/Menu";
 
 function MyApp({ Component, pageProps, router }) {
   return (
     <>
-      <AnimatePresence
+      {/* <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      ></Script>
+      <Script strategy="lazyOnload">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
+        `}
+      </Script> */}
+      {/* <AnimatePresence
         exitBeforeEnter
         onExitComplete={() => window.scrollTo(0, 0)}
-      >
-        <Component {...pageProps} key={router.asPath} router={router} />
-      </AnimatePresence>
+      > */}
+      {/* <Menu /> */}
+      <Component {...pageProps} key={router.asPath} router={router} />
+      {/* </AnimatePresence> */}
     </>
   );
 }

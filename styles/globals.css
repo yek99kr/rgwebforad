@@ -9,13 +9,16 @@ body {
   font-family: Helvetica, sans-serif;
   /* font-family: "Inter", sans-serif; */
   overflow: hidden;
+  background-color: #e9ebf0;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
+*:focus {
+  outline: none;
+}
 * {
   box-sizing: border-box;
 }

@@ -22,6 +22,11 @@ const Hands = () => {
         <directionalLight intensity={0.8} position={[-8, 20, 8]} />
 
         <Suspense fallback={null}>
+          {/* <mesh visible position={[0, 0, 0]} rotation={[Math.PI / 2, 0, 0]}>
+            <boxGeometry args={[7, 3, 2]} />
+            <meshStandardMaterial color="blue" transparent />
+          </mesh> */}
+
           <Hand
             firstPosition={[31, 10, 2]}
             secondPosition={[18, 10, 2]}

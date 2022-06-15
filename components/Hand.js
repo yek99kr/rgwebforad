@@ -5,8 +5,6 @@ import { useGraph, useFrame } from "@react-three/fiber";
 import { SkeletonUtils } from "three-stdlib";
 import { getMouseDegrees } from "../utils/getMouseDegrees";
 
-function grabphone() {}
-
 function moveJoint(mouse, joint, degreeLimit = 40) {
   let degrees = getMouseDegrees(-mouse.y + 400, mouse.x, degreeLimit);
   joint.rotation.xD = THREE.MathUtils.lerp(
@@ -63,9 +61,11 @@ export default function Hand({
     };
   }, [setX, setY]);
 
+  const fx = firstPosition[0];
   const px = secondPosition[0];
-  const py = secondPosition[1];
-  const pz = secondPosition[2];
+
+  // const py = secondPosition[1];
+  // const pz = secondPosition[2];
 
   ////MousePositionEnd
   useFrame((state, delta) => {
@@ -85,17 +85,17 @@ export default function Hand({
       0.1
     );
 
-    group.current.position.y = THREE.MathUtils.lerp(
-      group.current.position.y,
-      py,
-      0.1
-    );
+    // group.current.position.x = THREE.MathUtils.lerp(
+    //   group.current.position.x,
+    //   fx,
+    //   0.1
+    // );
 
-    group.current.position.z = THREE.MathUtils.lerp(
-      group.current.position.z,
-      pz,
-      0.1
-    );
+    // group.current.position.y = THREE.MathUtils.lerp(
+    //   group.current.position.y,
+    //   py,
+    //   0.1
+    // );
   });
 
   return (

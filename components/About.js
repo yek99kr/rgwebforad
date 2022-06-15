@@ -119,6 +119,12 @@ const About = (props) => {
         We work with <AboutDropDown madWords={madWords3} /> to make{" "}
         <AboutDropDown madWords={madWords4} />.
       </p>
+      <p className="font-[400] pt-7">
+        We make work that <AboutDropDown madWords={madWords6} /> the{" "}
+        <AboutDropDown madWords={madWords7} /> between{" "}
+        <AboutDropDown madWords={madWords8} /> and{" "}
+        <AboutDropDown madWords={madWords9} />.
+      </p>
       {props.isSmallWidth || props.isSmallHeight ? (
         <p className="font-[400] pt-7">
           We have an{" "}
@@ -143,12 +149,6 @@ const About = (props) => {
         </p>
       ) : (
         <>
-          <p className="font-[400] pt-7">
-            We make work that <AboutDropDown madWords={madWords6} /> the{" "}
-            <AboutDropDown madWords={madWords7} /> between{" "}
-            <AboutDropDown madWords={madWords8} /> and{" "}
-            <AboutDropDown madWords={madWords9} />.
-          </p>
           <p className="font-[400] pt-7">
             We have an{" "}
             <a

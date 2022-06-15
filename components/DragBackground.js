@@ -5,14 +5,15 @@ const DragBackground = () => {
     <>
       <img
         src="/inside.jpg"
-        className="absolute top-0 left-0 w-[100vw] h-[100vh] z-[-10]"
+        className="absolute top-0 left-0 w-[100vw] h-[100vh] z-[0]"
       ></img>
+
       <motion.div
         drag
         dragMomentum={false}
         className="absolute top-0 left-0  w-[100vw] h-[100vh]"
       >
-        <div className="font-mono absolute inline top-0 left-0 w-[100vw] h-[100vh] text-sm 2xl:text-md p-4 overflow-hidden bg-blue z-[-2]">
+        <div className="font-mono absolute inline top-0 left-0 w-[100vw] h-[100vh] text-sm 2xl:text-md p-4 overflow-hidden bg-blue z-[0]">
           <div className="bg-white absolute top-0 left-0  w-[100vw] h-[100vh] z-[-9]"></div>
           <p style={{ color: "gray" }}> &lt;!DOCTYPE html&gt;</p>
           <p style={{ color: "#c10058" }}>&lt;html&gt;</p>
@@ -243,13 +244,13 @@ const DragBackground = () => {
         </div>
       </motion.div>
 
+      <div className="absolute top-1/2 left-1/2 transform rounded -translate-x-1/2 -translate-y-[57%] w-[55%] h-[55%] opacity-[0.4] bg-white z-[0] pointer-events-none"></div>
+
       <motion.div
         drag
         dragMomentum={false}
         className="absolute top-0 left-0 bg-[#e9ebf0] w-[100vw] h-[100vh]"
       ></motion.div>
-
-      <div className="absolute top-1/2 left-1/2 transform rounded -translate-x-1/2 -translate-y-[57%] w-[55%] h-[55%] opacity-[0.4] bg-white z-[-1]"></div>
     </>
   );
 };

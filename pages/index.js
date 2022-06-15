@@ -4,7 +4,7 @@ import Head from "../components/Head";
 export default function Home({ router }) {
   return (
     <div>
-      <Head />
+      {/* <Head /> */}
       <HomePage router={router} />
     </div>
   );
