@@ -7,11 +7,9 @@ module.exports = {
     extend: {
       screens: {
         // prettier-ignore
-        "4xs": {'min': '200px', 'max': '300px'},
+        "3xs": {'min': '340px', 'max': '400px'},
         // prettier-ignore
-        "3xs": {'min': '300px', 'max': '370px'},
-        // prettier-ignore
-        "2xs": {'min': '370px', 'max': '460px'},
+        "2xs": {'min': '400px', 'max': '460px'},
         // prettier-ignore
         'xs': {'min': '460px', 'max': '640px'},
       },
