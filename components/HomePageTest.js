@@ -102,7 +102,6 @@ const HomePageTest = ({ router }) => {
   // 320px 568px 768 x 1076 Pixels
 
   const isSmallWidth = useMediaQueryWidth(1024);
-  const isSmallerWidth = useMediaQueryWidth(321);
   const isSmallestWidth = useMediaQueryWidth(210);
   const isSmallHeight = useMediaQueryHeight(700);
   const isSmallerHeight = useMediaQueryHeight(479);

@@ -98,14 +98,8 @@ const HomePage = ({ router }) => {
         isTouchDevice()
     );
   }, []);
-  // const isSmallWidth = useMediaQueryWidth(1023);
-  // const isSmallerWidth = useMediaQueryWidth(389);
-  // const isSmallestWidth = useMediaQueryWidth(210);
-  // const isSmallHeight = useMediaQueryHeight(550);
-  // const isSmallestHeight = useMediaQueryHeight(374);
 
   const isSmallWidth = useMediaQueryWidth(1024);
-  const isSmallerWidth = useMediaQueryWidth(321);
   const isSmallestWidth = useMediaQueryWidth(210);
   const isSmallHeight = useMediaQueryHeight(700);
   const isSmallerHeight = useMediaQueryHeight(479);
