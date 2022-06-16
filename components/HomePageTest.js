@@ -3,7 +3,8 @@ import Ad from "./Ad";
 import DragBackground from "./DragBackground";
 import About from "./About";
 import { useState, useCallback, useEffect } from "react";
-import { motion } from "framer-motion";
+import { isMobile } from "react-device-detect";
+import HandMobile from "./HandMobile";
 
 function isTouchDevice() {
   if (typeof window === "undefined") return false;
@@ -11,7 +12,7 @@ function isTouchDevice() {
   function mq(query) {
     return typeof window !== "undefined" && window.matchMedia(query).matches;
   }
-
+  // @ts-ignore
   if (
     "ontouchstart" in window ||
     (window?.DocumentTouch && document instanceof DocumentTouch)
@@ -75,7 +76,7 @@ const useMediaQueryHeight = (height) => {
   return targetReached;
 };
 
-const HomePage = ({ router }) => {
+const HomePageTest = ({ router }) => {
   const [isTouch, setIsTouch] = useState(false);
   useEffect(() => {
     const {
@@ -84,7 +85,6 @@ const HomePage = ({ router }) => {
       isIPhone13,
       isWinPhone,
       isMobileSafari,
-      isMobile,
       isTablet,
     } = require("react-device-detect");
     setIsTouch(
@@ -98,11 +98,8 @@ const HomePage = ({ router }) => {
         isTouchDevice()
     );
   }, []);
-  // const isSmallWidth = useMediaQueryWidth(1023);
-  // const isSmallerWidth = useMediaQueryWidth(389);
-  // const isSmallestWidth = useMediaQueryWidth(210);
-  // const isSmallHeight = useMediaQueryHeight(550);
-  // const isSmallestHeight = useMediaQueryHeight(374);
+
+  // 320px 568px 768 x 1076 Pixels
 
   const isSmallWidth = useMediaQueryWidth(1024);
   const isSmallerWidth = useMediaQueryWidth(321);
@@ -111,7 +108,27 @@ const HomePage = ({ router }) => {
   const isSmallerHeight = useMediaQueryHeight(479);
   const isSmallestHeight = useMediaQueryHeight(377);
 
-  // w214 h379
+  let hand;
+
+  if (isSmallestHeight) {
+    hand = null;
+  } else if (isSmallHeight && !isSmallWidth) {
+    hand = null;
+  } else if (isSmallWidth || isTouch) {
+    hand = <HandMobile />;
+  } else {
+    hand = <Hands />;
+  }
+
+  // if (isSmallHeight && !isSmallWidth) {
+  //   ad = null;
+  // } else if (isSmallestHeight) {
+  //   ad = null;
+  // } else {
+  //   ad = <Ad />;
+  // }
+
+  // w320px h568px 211 567
 
   return (
     <>
@@ -121,34 +138,23 @@ const HomePage = ({ router }) => {
         <DragBackground />
       )}
 
+      {/* {ad} */}
       {isSmallestHeight || (isSmallerHeight && !isSmallestWidth) ? null : (
         <Ad />
       )}
-      <motion.div
-        key={router.route}
-        className="w-[100vw]"
-        initial="pageInitial"
-        animate="pageAnimate"
-        transition={{ delay: 0.5, default: { duration: 1 } }}
-        variants={{
-          pageInitial: { opacity: 0 },
-          pageAnimate: {
-            opacity: 1,
-          },
-        }}
-      >
-        <About
-          isSmallWidth={isSmallWidth}
-          router={router}
-          isSmallerHeight={
-            isSmallestHeight || (isSmallerHeight && !isSmallestWidth)
-          }
-        />
-      </motion.div>
 
-      {isSmallWidth || isTouch || isSmallHeight ? null : <Hands />}
+      <About
+        isSmallWidth={isSmallWidth}
+        isSmallerHeight={
+          isSmallestHeight || (isSmallerHeight && !isSmallestWidth)
+        }
+      />
+      {/* 
+      {isSmallWidth || isMobile || isSmallHeight ? <HandMobile /> : <Hands />} */}
+
+      {hand}
     </>
   );
 };
 
-export default HomePage;
+export default HomePageTest;

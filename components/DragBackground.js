@@ -244,7 +244,7 @@ const DragBackground = () => {
         </div>
       </motion.div>
 
-      <div className="absolute top-1/2 left-1/2 transform rounded -translate-x-1/2 -translate-y-[57%] w-[55%] h-[55%] opacity-[0.4] bg-white z-[0] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 transform rounded -translate-x-1/2 -translate-y-[57%] w-[91vw] sm:w-[88vw] md:w-[80vw] lg:w-[78vw] xl:w-[63vw] 2xl:w-[58vw] h-[55%] opacity-[0.4] bg-white z-[0] pointer-events-none"></div>
 
       <motion.div
         drag
