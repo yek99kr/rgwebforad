@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import { motion, AnimatePresence } from "framer-motion";
 import Script from "next/script";
 
 function MyApp({ Component, pageProps, router }) {
@@ -18,13 +17,8 @@ function MyApp({ Component, pageProps, router }) {
         gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
         `}
       </Script> */}
-      {/* <AnimatePresence
-        exitBeforeEnter
-        onExitComplete={() => window.scrollTo(0, 0)}
-      > */}
-      {/* <Menu /> */}
+
       <Component {...pageProps} key={router.asPath} router={router} />
-      {/* </AnimatePresence> */}
     </>
   );
 }

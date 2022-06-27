@@ -64,9 +64,6 @@ export default function Hand({
   const fx = firstPosition[0];
   const px = secondPosition[0];
 
-  // const py = secondPosition[1];
-  // const pz = secondPosition[2];
-
   ////MousePositionEnd
   useFrame((state, delta) => {
     const mouse = {
@@ -84,18 +81,6 @@ export default function Hand({
       px,
       0.1
     );
-
-    // group.current.position.x = THREE.MathUtils.lerp(
-    //   group.current.position.x,
-    //   fx,
-    //   0.1
-    // );
-
-    // group.current.position.y = THREE.MathUtils.lerp(
-    //   group.current.position.y,
-    //   py,
-    //   0.1
-    // );
   });
 
   return (

@@ -7,6 +7,7 @@ import { useRef, useEffect, useState } from "react";
 import { useGLTF, Html, useAnimations } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import Vimeo from "@u-wave/react-vimeo";
+import Image from "next/image";
 
 export default function Model({ close, setClose, hinge, ...props }) {
   const group = useRef();
@@ -64,8 +65,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
           <Html
             transform
             occlude
-            // style={{ width: "402px", height: "88px" }}
-            className=" p-0 w-[402px] h-[88px]  "
+            className="p-0 w-[402px] h-[88px]  "
             position={[0, 0, 0.54]}
           >
             <div
@@ -76,31 +76,27 @@ export default function Model({ close, setClose, hinge, ...props }) {
                 transformOrigin: "top left",
               }}
             >
-              <a
-                href="https://www.instagram.com/real.good.studio/"
-                target="_blank"
-                rel="noreferrer"
-                className="thumbcursor"
-              >
-                <div
-                  className="absolute w-[100%] h-[100%] top-[0px] right-[-1px] bg-white
+              <div
+                className="absolute w-[100%] h-[100%] top-[0px] right-[-1px] bg-white
                 "
-                  style={{ transformOrigin: "top left", overflow: "hidden" }}
-                >
-                  <Vimeo
-                    video="https://vimeo.com/711679952"
-                    autoplay={true}
-                    autopause={false}
-                    controls={false}
-                    loop={true}
-                    showTitle={false}
-                    showByline={false}
-                    height="250%"
-                    muted={true}
-                    className="absolute top-[-90%] left-0 pointer-events-none z-[0] "
-                  />
-                </div>
-              </a>
+                onClick={(e) => {
+                  e.stopPropagation(), setClose(!close);
+                }}
+                style={{ transformOrigin: "top left", overflow: "hidden" }}
+              >
+                <Vimeo
+                  video="https://vimeo.com/711679952"
+                  autoplay={true}
+                  autopause={false}
+                  controls={false}
+                  loop={true}
+                  showTitle={false}
+                  showByline={false}
+                  height="250%"
+                  muted={true}
+                  className="absolute top-[-90%] left-0 pointer-events-none z-[0] "
+                />
+              </div>
 
               <div className="absolute left-0 w-[16px] h-[15px] bg-white rounded-br text-[9px] pl-[1px] text-gray-600 font-semibold">
                 AD
