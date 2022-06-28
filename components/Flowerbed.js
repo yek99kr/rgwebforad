@@ -115,6 +115,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
                 )}
                 <img
                   src="/adIcon.png"
+                  alt="adIcon"
                   className="relative w-[15px] h-[15px] inline-block thumbcursor"
                   onMouseEnter={() => setShowText(true)}
                   onMouseLeave={() => setShowText(false)}
@@ -122,6 +123,7 @@ export default function Model({ close, setClose, hinge, ...props }) {
 
                 <img
                   src="/adClose.jpg"
+                  alt="adClose"
                   className="relative w-[15px] h-[15px] inline-block thumbcursor"
                 ></img>
               </div>

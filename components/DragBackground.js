@@ -5,6 +5,7 @@ const DragBackground = () => {
     <>
       <img
         src="/inside.webp"
+        alt="inside computer"
         className="absolute top-0 left-0 w-[100vw] h-[100vh] z-[0]"
       ></img>
 
@@ -244,7 +245,7 @@ const DragBackground = () => {
         </div>
       </motion.div>
 
-      <div className="absolute top-1/2 left-1/2 transform rounded -translate-x-1/2 -translate-y-[59%] w-[90vw] sm:w-[85vw] md:w-[80vw] lg:w-[76vw] xl:w-[65vw] 2xl:w-[61vw] h-[55vh] lg:h-[53vh] xl:h-[55vh] opacity-[0.4] bg-white z-[0] pointer-events-none"></div>
+      {/* <div className="absolute top-1/2 left-1/2 transform rounded -translate-x-1/2 -translate-y-[59%] w-[90vw] sm:w-[85vw] md:w-[80vw] lg:w-[76vw] xl:w-[65vw] 2xl:w-[61vw] h-[55vh] lg:h-[53vh] xl:h-[55vh] opacity-[0.4] bg-white z-[0] pointer-events-none"></div> */}
 
       <motion.div
         drag

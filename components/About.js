@@ -106,11 +106,12 @@ const About = (props) => {
   return (
     <>
       {!props.isSmallerHeight ? (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[63%] leading-[2] md:leading-[2.2] lg:leading-[1.9] w-[87vw] sm:w-[85vw] md:w-[80vw] lg:w-[68vw] xl:w-[63vw] 2xl:w-[60vw] text-[3vw] 4xs:text-[2.9vw] sm:text-[16px] md:text-[17px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[63%] leading-[2] md:leading-[2.2] lg:leading-[1.9] w-[87vw] sm:w-[85vw] md:w-[80vw] lg:w-[68vw] xl:w-[63vw] 2xl:w-[60vw] text-[3vw] 4xs:text-[2.9vw] sm:text-[16px] md:text-[17px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center bg-[#e9ebf0]/40 bg-opacity-1/2 p-5">
           <p className="font-[400]">
             We&apos;re{" "}
             <img
               src="/logoShort.png"
+              alt="logo"
               className="inline w-[13.5vw] sm:w-[75px] md:w-[85px] lg:w-[87.5px] xl:w-[96px] 2xl:w-[105px] ml-0.5 mr-0.5"
             />
             . We&apos;re a <AboutDropDown madWords={madWords1} /> creative
