@@ -13,6 +13,7 @@ const HomePage = ({ router }) => {
   const isSmallestWidth = useMediaQueryWidth(210);
   const isSmallestHeight = useMediaQueryHeight(349);
   const isSmallHeight = useMediaQueryHeight(650);
+  const isSmallerHeight = useMediaQueryHeight(550);
   const isTouch = useIsTouch();
 
   let hand;
@@ -38,7 +39,7 @@ const HomePage = ({ router }) => {
         <DragBackground />
       )}
 
-      {isSmallestHeight ? null : <Ad />}
+      {isSmallestHeight || (!isSmallWidth && isSmallerHeight) ? null : <Ad />}
 
       <motion.div
         key={router.route}
