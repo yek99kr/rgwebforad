@@ -1,5 +1,6 @@
 import AboutDropDown from "./AboutDropDown";
 import { useState } from "react";
+import Link from "next/link";
 
 const About = (props) => {
   const [hoverEmail, setHoverEmail] = useState(false);
@@ -157,18 +158,21 @@ const About = (props) => {
                 </span>
               </a>{" "}
               with some work and a{" "}
-              <a
+              {/* <a
                 href="https://realgoodstudiodeck.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
-              >
-                <span className="deck inline-block noselect thumbcursor">
-                  <span className="wiggleMobile1 text-purple-500">d</span>
-                  <span className="wiggleMobile2 text-yellow-500">e</span>
-                  <span className="wiggleMobile3 text-sky-400">c</span>
-                  <span className="wiggleMobile4 text-pink-500">k</span>
-                </span>{" "}
-              </a>
+              > */}
+              <Link href="/deck">
+                <a>
+                  <span className="deck inline-block noselect thumbcursor">
+                    <span className="wiggleMobile1 text-purple-500">d</span>
+                    <span className="wiggleMobile2 text-yellow-500">e</span>
+                    <span className="wiggleMobile3 text-sky-400">c</span>
+                    <span className="wiggleMobile4 text-pink-500">k</span>
+                  </span>{" "}
+                </a>
+              </Link>
               with some more work.
             </p>
           </>

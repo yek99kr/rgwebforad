@@ -1,13 +1,27 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  i18n: {
-    locales: ["en-US"],
-    defaultLocale: "en-US",
-  },
-  reactStrictMode: false,
-};
+// const nextConfig = {
+//   i18n: {
+//     locales: ["en-US"],
+//     defaultLocale: "en-US",
+//   },
+//   reactStrictMode: false,
+// };
 
-module.exports = nextConfig;
+// module.exports = nextConfig;
+
+module.exports = () => {
+  const rewrites = () => {
+    return [
+      {
+        source: "/deck",
+        destination: "https://deckrealgood.netlify.app",
+      },
+    ];
+  };
+  return {
+    rewrites,
+  };
+};
 
 // module.exports = {
 //   env: {
