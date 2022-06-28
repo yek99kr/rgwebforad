@@ -157,7 +157,7 @@ const About = (props) => {
               </a>{" "}
               with some work and a{" "}
               <a
-                href="https://realgooddeck.netlify.app/"
+                href="https://realgoodstudiodeck.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
               >

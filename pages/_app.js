@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Script from "next/script";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps, router }) {
         gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
         `}
       </Script> */}
+      <GoogleAnalytics strategy="lazyOnload" />
 
       <Component {...pageProps} key={router.asPath} router={router} />
     </>
