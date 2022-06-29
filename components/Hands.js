@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Hand from "./Hand";
+import { ResizeObserver } from "@juggle/resize-observer";
 
 const Hands = () => {
   const texture = [
@@ -12,7 +13,11 @@ const Hands = () => {
 
   return (
     <div className="w-[100vw] h-[100vh]" style={{ pointerEvents: "none" }}>
-      <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 30], fov: 30 }}>
+      <Canvas
+        dpr={[1, 1.5]}
+        camera={{ position: [0, 0, 30], fov: 30 }}
+        resize={{ polyfill: ResizeObserver }}
+      >
         <hemisphereLight intensity={0.7} position={[0, 50, 0]} />
         <directionalLight intensity={0.8} position={[-8, 20, 8]} />
 

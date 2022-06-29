@@ -7,7 +7,6 @@ import { useRef, useEffect, useState } from "react";
 import { useGLTF, Html, useAnimations } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import Vimeo from "@u-wave/react-vimeo";
-import Image from "next/image";
 
 export default function Model({ close, setClose, hinge, ...props }) {
   const group = useRef();

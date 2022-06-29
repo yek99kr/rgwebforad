@@ -107,7 +107,7 @@ const About = (props) => {
   return (
     <>
       {!props.isSmallerHeight ? (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[61%] leading-[2] md:leading-[2.2] lg:leading-[1.9] w-[87vw] sm:w-[85vw] md:w-[80vw] lg:w-[68vw] xl:w-[63vw] 2xl:w-[60vw] text-[3vw] 4xs:text-[2.9vw] sm:text-[16px] md:text-[17px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center bg-[#e9ebf0]/40 p-5">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[61%] leading-[2] md:leading-[2.2] lg:leading-[1.9] w-[90vw] sm:w-[85vw] md:w-[80vw] lg:w-[68vw] xl:w-[63vw] 2xl:w-[60vw] text-[3vw] 4xs:text-[2.9vw] sm:text-[16px] md:text-[17px] lg:text-[18.5px] xl:text-[19.5px] 2xl:text-[23px] text-center bg-[#e9ebf0]/40 p-5">
           <p className="font-[400]">
             We&apos;re{" "}
             <img
@@ -208,7 +208,7 @@ const About = (props) => {
           </p>
         </div>
       ) : (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[55%] w-[87vw] text-[3.1vw] sm:text-[16px] md:text-[17px] lg:text-[19px] xl:text-[21px] 2xl:text-[24.5px] text-center">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[40%] w-[87vw] text-[3.1vw] sm:text-[16px] md:text-[17px] lg:text-[19px] xl:text-[21px] 2xl:text-[24.5px] text-center">
           <p className="font-[400] select-auto">
             Currently taking on select projects{" "}
             <a
