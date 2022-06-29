@@ -14,7 +14,7 @@ module.exports = () => {
     return [
       {
         source: "/deck",
-        destination: "https://deckrealgood.netlify.app",
+        destination: "http://deck.realgood.tv/",
       },
     ];
   };
