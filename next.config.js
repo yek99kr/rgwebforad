@@ -9,19 +9,51 @@
 
 // module.exports = nextConfig;
 
-module.exports = () => {
-  const rewrites = () => {
-    return [
-      {
-        source: "/deck",
-        destination: "http://deck.realgood.tv/",
-      },
-    ];
-  };
-  return {
-    rewrites,
-  };
+// module.exports = () => {
+//   const rewrites = () => {
+//     return [
+//       {
+//         source: "/deck",
+//         destination: "https://deckrealgood.netlify.app",
+//       },
+//     ];
+//   };
+//   return {
+//     rewrites,
+//   };
+// };
+
+module.exports = {
+  // basePath: '/docs',
+  reactStrictMode: false,
+  async rewrites() {
+    return {
+      fallback: [
+        {
+          source: "/deck",
+          destination: `https://deck.realgood.tv`,
+          basePath: false,
+        },
+      ],
+    };
+  },
 };
+
+// module.exports = {
+//   i18n: {
+//     locales: ["en-US"],
+//     defaultLocale: "en-US",
+//   },
+//   reactStrictMode: false,
+//   async rewrites() {
+//     return [
+//       {
+//         source: "/deck",
+//         destination: "https://deck.realgood.tv",
+//       },
+//     ];
+//   },
+// };
 
 // module.exports = {
 //   env: {

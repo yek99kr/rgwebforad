@@ -163,7 +163,7 @@ const About = (props) => {
                 target="_blank"
                 rel="noreferrer"
               > */}
-              <Link href="/deck">
+              <Link href="http://deck.realgood.tv/">
                 <a>
                   <span className="deck inline-block noselect thumbcursor">
                     <span className="wiggle1 text-purple-500">d</span>
