@@ -158,11 +158,6 @@ const About = (props) => {
                 </span>
               </a>{" "}
               with some work and a{" "}
-              {/* <a
-                href="https://realgoodstudiodeck.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
-              > */}
               <Link href="http://deck.realgood.tv/">
                 <a>
                   <span className="deck inline-block noselect thumbcursor">
