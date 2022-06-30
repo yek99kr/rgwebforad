@@ -10,18 +10,21 @@ import useIsTouch from "../utils/useIsTouch";
 
 const HomePage = ({ router }) => {
   const isSmallWidth = useMediaQueryWidth(750);
-  // const isSmallestWidth = useMediaQueryWidth(210);
-  const isSmallestHeight = useMediaQueryHeight(349);
-  const isSmallHeight = useMediaQueryHeight(650);
+  const isSmallerWidth = useMediaQueryWidth(638);
+  const isSmallestWidth = useMediaQueryWidth(210);
+
+  const isSmallHeight = useMediaQueryHeight(639);
   const isSmallerHeight = useMediaQueryHeight(550);
+  const isSmallestHeight = useMediaQueryHeight(349);
   const isTouch = useIsTouch();
 
   let hand;
 
   if (
     isSmallestHeight ||
-    (isSmallHeight && !isSmallWidth) ||
-    isSmallWidth ||
+    (!isSmallerWidth && isSmallHeight) ||
+    (isSmallWidth && !isSmallHeight) ||
+    isSmallerWidth ||
     isTouch
   ) {
     hand = null;
@@ -33,13 +36,13 @@ const HomePage = ({ router }) => {
 
   return (
     <>
-      {isSmallHeight || isSmallWidth || isTouch ? (
+      {isSmallerHeight || isSmallerWidth || isTouch ? (
         <div className="absolute top-0 left-0 bg-[#e9ebf0] w-[100vw] h-[100vh]"></div>
       ) : (
         <DragBackground />
       )}
 
-      {isSmallestHeight || (!isSmallWidth && isSmallerHeight) ? null : <Ad />}
+      {isSmallestHeight || (!isSmallerWidth && isSmallerHeight) ? null : <Ad />}
 
       <motion.div
         key={router.route}
@@ -54,7 +57,7 @@ const HomePage = ({ router }) => {
           },
         }}
       >
-        <About router={router} isSmallerHeight={isSmallestHeight} />
+        <About router={router} isSmallestHeight={isSmallestHeight} />
       </motion.div>
 
       {hand}
