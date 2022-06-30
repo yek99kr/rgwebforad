@@ -30,17 +30,17 @@ module.exports = {
   },
   // basePath: '/docs',
   reactStrictMode: true,
-  async rewrites() {
-    return {
-      fallback: [
-        {
-          source: "/deck",
-          destination: `https://deck.realgood.tv`,
-          basePath: false,
-        },
-      ],
-    };
-  },
+  // async rewrites() {
+  //   return {
+  //     fallback: [
+  //       {
+  //         source: "/deck",
+  //         destination: `https://realgooddecktest.netlify.app`,
+  //         basePath: false,
+  //       },
+  //     ],
+  //   };
+  // },
 };
 
 // module.exports = {
