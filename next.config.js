@@ -29,7 +29,7 @@ module.exports = {
     defaultLocale: "en-US",
   },
   // basePath: '/docs',
-  reactStrictMode: false,
+  reactStrictMode: true,
   async rewrites() {
     return {
       fallback: [
